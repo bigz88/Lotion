@@ -1,10 +1,4 @@
 const Sidebar = ({notes, onAddNote, activeNote, setActiveNote, hamburger}) => {
-    const sortedNotes = notes.sort((a,b) => b.lastModified - a.lastModified);
-    const extractText = (html) => {
-        const parser = new DOMParser();
-        const parsed = parser.parseFromString(html, "text/html");
-        return parsed.documentElement.textContent;
-    };
 
     return( <div className={`app-sidebar ${hamburger ? "hide" : ""}`}>
         <div className="app-sidebar-header">
